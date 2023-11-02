@@ -25,7 +25,8 @@ class HomePage extends StatelessWidget {
                   builder: (context) => BookPage(
                       name: listOfBooks[index].name,
                       author: listOfBooks[index].author,
-                  year: listOfBooks[index].year,
+                  year:listOfBooks[index].year,
+                  //showYear(index),
                       about: listOfBooks[index].about,
                   rate: listOfBooks[index].rate,
                   image: listOfBooks[index].image,),
@@ -49,10 +50,10 @@ class HomePage extends StatelessWidget {
                   Container(
                     color: Colors.white54,
                     child: Container(
-                        width: 50,
-                        height: 50,
+                        width: 100,
+                        height: 100,
                         child: Image.network(
-                            listOfBooks[index].image)),
+                            listOfBooks[index].image, fit: BoxFit.cover,)),
                     // TODO function toShowImage
                   ),
                 ],
@@ -70,9 +71,11 @@ List<Books> listOfBooks = [
   second,
   third,
   forth,
+  fifth,
+  six,
+  seven,
 ];
-
-// Image showImage (String image){
-//   (image == null)? return Image.network('https://www.actbus.net/fleetwiki/images/8/84/Noimage.jpg')
-//
+// String? showYear (int index){
+//   (listOfBooks[index].year==null)? 'Unknown': '${listOfBooks[index].year.toString()}';
 // }
+// я хотела, чтоб при передаче параметра year BookPage, выполнилась проверка на null.

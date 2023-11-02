@@ -1,7 +1,7 @@
 class Books {
   String name;
   String author;
-  int? year;
+  String? year;
   String about;
   String image;
   double rate;
