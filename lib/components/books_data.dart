@@ -1,4 +1,4 @@
-import 'package:list_of_books_06112023/books.dart';
+import 'package:list_of_books_06112023/components/books_class.dart';
 import 'package:flutter/material.dart';
 
 Books first = Books(
